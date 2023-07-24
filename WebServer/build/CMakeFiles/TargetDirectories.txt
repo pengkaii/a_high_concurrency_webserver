@@ -1,0 +1,9 @@
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/install/strip.dir
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/install/local.dir
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/edit_cache.dir
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/web_server.dir
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/event_static.dir
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/install.dir
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/list_install_components.dir
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/rebuild_cache.dir
+/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/build/CMakeFiles/event_shared.dir

@@ -13,7 +13,7 @@
 
 #include "event/channel.h"
 #include "timer/timer.h"
-#include "http/http_connection.h"
+#include "connection/http_connection.h"
 #include "log/logging.h"
 
 namespace event {

@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=gnu++11 -Wfatal-errors -Wno-unused-parameter -Wl,-rpath=/xiangmu/a-high-concurrency-webserver-in-linux/WebServer/lib -O3   CMakeFiles/web_server.dir/main.cpp.o  -o web_server  libevent.a -lpthread 

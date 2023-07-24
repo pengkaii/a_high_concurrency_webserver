@@ -6,7 +6,7 @@
 #include <memory>
 #include <queue>
 
-#include "http/http_connection.h"
+#include "connection/http_connection.h"
 #include "log/logging.h"
 
 namespace timer {

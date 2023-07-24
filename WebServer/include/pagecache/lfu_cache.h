@@ -4,7 +4,7 @@
 #include <string>
 
 #include "locker/mutex_lock.h"
-#include "memory/MemoryPool.h"
+#include "memory/memory_pool.h"
 
 #define LFU_CAPACITY 10
 

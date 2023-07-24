@@ -8,7 +8,7 @@ namespace cache
 void KeyList::init(int freq) {
     freq_ = freq;
     // Dummyhead_ = tail_= new Node<Key>;
-    Dummyhead_ = newElement<Node<Key>>();
+    Dummyhead_ = memoryPool::newElement<Node<Key>>();
     tail_ = Dummyhead_;
     Dummyhead_->setNext(nullptr);
 }
@@ -19,7 +19,7 @@ void KeyList::destory() {
         key_node pre = Dummyhead_;
         Dummyhead_ = Dummyhead_->getNext();
         // delete pre;
-        deleteElement(pre);
+        memoryPool::deleteElement(pre);
     }
 }
 
@@ -79,7 +79,7 @@ LFUCache::~LFUCache() {
         Dummyhead_ = Dummyhead_->getNext();
         pre->getValue().destory();
         // delete pre;
-        deleteElement(pre);
+        memoryPool::deleteElement(pre);
     }
 }
 
@@ -87,7 +87,7 @@ void LFUCache::Init() {
     // FIXME: 缓存的容量动态变化
     
     // Dummyhead_ = new Node<KeyList>();
-    Dummyhead_ = newElement<Node<KeyList>>();
+    Dummyhead_ = memoryPool::newElement<Node<KeyList>>();
     Dummyhead_->getValue().init(0);
     Dummyhead_->setNext(nullptr);
 }
@@ -104,7 +104,7 @@ void LFUCache::AddFreq(key_node& nowk, freq_node& nowf) {
         nowf->getNext()->getValue().getFreq() != nowf->getValue().getFreq() + 1) {
             // 新建一个下一频度的大链表,加到nowf后面
             // nxt = new Node<KeyList>();
-            nxt = newElement<Node<KeyList>>();
+            nxt = memoryPool::newElement<Node<KeyList>>();
             nxt->getValue().init(nowf->getValue().getFreq() + 1);
             if(nowf->getNext() != nullptr)
                 nowf->getNext()->setPre(nxt);
@@ -165,14 +165,14 @@ void LFUCache::Set(string& key, string& val) {
         fmap_.erase(last->getValue().key_);
 
         // delete last;
-        deleteElement(last);
+        memoryPool::deleteElement(last);
         // 如果频度最小的链表已经没有节点，就删除
         if(head->getValue().isEmpty()) {
             Del(head);
         }
     }
     // key_node nowk = new Node<Key>();
-    key_node nowk = newElement<Node<Key>>();
+    key_node nowk = memoryPool::newElement<Node<Key>>();
     
     nowk->getValue().key_ = key;
     nowk->getValue().value_ = val;
@@ -190,7 +190,7 @@ void LFUCache::Del(freq_node& node) {
 
     node->getValue().destory();
     // delete node;
-    deleteElement(node);
+     memoryPool::deleteElement(node);
     
 }
 
