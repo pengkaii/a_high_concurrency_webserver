@@ -1,4 +1,4 @@
-# a high concurrency WebServer in linux
+# 基于主从Reactor模式的跨平台C++高性能服务器
 
 
 
